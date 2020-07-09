@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<table>
+			<thead>
+				<tr style="background: #E8E8E8;">
+					<th>序号</th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>年龄</th>
+				</tr>
+			</thead>
+
+			<tbody th:each="user:${session.users}">
+				<tr>
+					<td th:text="${user.id}"></td>
+					<td th:text="${user.name}"></td>
+					<td th:text="${user.gender}"></td>
+					<td th:text="${user.age}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
